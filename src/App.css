@@ -1,0 +1,12 @@
+h1{
+    color: red;
+}
+
+.App{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
