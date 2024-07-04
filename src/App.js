@@ -1,9 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import Button from "./Button"
+import Button from "./Button";
 
 function App() {
-
   const [state, setState] = useState(0);
 
   // const foo = (data) => {
@@ -11,8 +10,12 @@ function App() {
   // }
 
   const handleLike = () => {
-    setState(state + 1)
-  }
+    setState(state + 1);
+  };
+
+  const handleDislike = () => {
+    setState(state - 1);
+  };
 
   return (
     <div className="App">
@@ -23,10 +26,9 @@ function App() {
       <Button name={"Music"} foo={foo}  />
       <Button name={"Books"} foo={foo}  /> */}
 
-        <h1>{state}</h1>
+      <h1>{state}</h1>
       <button onClick={handleLike}>👍 Like</button>
-      
-      
+      <button onClick={handleDislike}>👎 Dislike</button>
     </div>
   );
 }
